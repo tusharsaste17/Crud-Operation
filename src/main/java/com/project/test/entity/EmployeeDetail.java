@@ -2,6 +2,7 @@ package com.project.test.entity;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 import com.project.test.validation.ValidateEmailAnnotation;
@@ -29,6 +30,7 @@ public class EmployeeDetail implements Serializable {
 	@Column(name="emp_name")
 	private String empName;
 	@Column(name="emp_email")
+	@Email
 	@NotBlank(message="email should be required")
 	@ValidateEmailAnnotation(message="emial must me unique")
 	private String empEmail;

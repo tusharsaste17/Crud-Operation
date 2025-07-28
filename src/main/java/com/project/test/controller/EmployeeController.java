@@ -2,6 +2,8 @@ package com.project.test.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -36,7 +38,7 @@ public class EmployeeController {
 		return employeeService.getByEmpId(id);
 	}
 	@PostMapping("/saveEmpDetail")
-	public int addEmployee(@RequestBody EmployeeDetail emp) {
+	public int addEmployee(@Valid @RequestBody EmployeeDetail emp) {
 		int empId = employeeService.addEmployeeDetail(emp);
 		return empId;
 	}
