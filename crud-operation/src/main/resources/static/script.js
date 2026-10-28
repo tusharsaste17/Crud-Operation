@@ -165,8 +165,8 @@ function renderStudents() {
         const row = document.createElement("tr");
 
         addCell(row, getStudentId(student));
-        addCell(row, student.firstName);
-        addCell(row, student.lastName);
+        addCell(row, student.firstName+" "+student.lastName);
+//        addCell(row, student.lastName);
         addCell(row, student.email);
         addCell(row, student.phone);
         addCell(row, formatDate(student.dateOfBirth));
@@ -250,7 +250,7 @@ function validateStudent(student) {
         return "Email cannot exceed 100 characters.";
     }
 
-    if (student.phone && student.phone.length > 15) {
+    if (student.phone && student.phone.length > 10) {
         return "Phone cannot exceed 15 characters.";
     }
 
