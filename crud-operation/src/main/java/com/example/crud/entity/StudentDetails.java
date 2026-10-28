@@ -7,7 +7,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
-@Table( name = "student_details")
+@Table( name = "student_details",
+schema = "practice")
 @Data
 public class StudentDetails {
 

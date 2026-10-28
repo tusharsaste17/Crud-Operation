@@ -42,8 +42,8 @@ public class StudentController {
     // =====================================================
     @PostMapping("/addNew")
     public ResponseEntity<StudentResponseDto> addNewStudent(@Valid @RequestBody StudentRequestDto requestDTO) {
-        StudentResponseDto updatedStudent = studentService.addNewStudent(requestDTO);
-        return ResponseEntity.ok(updatedStudent);
+        StudentResponseDto addNewStudent = studentService.addNewStudent(requestDTO);
+        return ResponseEntity.ok(addNewStudent);
     }
 
     // =====================================================
