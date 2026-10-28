@@ -106,6 +106,10 @@ public class StudentService {
         return convertToResponseDTO(addedNewStudent);
     }
 
+    public void deleteStudent(Long studentId) {
+        // Delete student
+        studentRepository.deleteById(studentId);
+    }
 
     // =====================================================
     // ENTITY → RESPONSE DTO
